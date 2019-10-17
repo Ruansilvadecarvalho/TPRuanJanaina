@@ -89,10 +89,9 @@
     </div>
     <div>
       
-
     <label for="interesse" >Interesse: (com multipla escolha</label>
     <select name="interesse" multiple size="5"> 
-        <option value="js" selected="js">JavaScript</option> 
+        <option value="js" selected>JavaScript</option> 
         <option value="c">C</option> 
         <option value="pytho">Python</option> 
         <option value="java">Java</option> 
