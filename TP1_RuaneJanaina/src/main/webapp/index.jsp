@@ -39,7 +39,7 @@
   <div>
     <input type="hidden" name="oculto" value="emJs">
     <label for="nome">Nome: </label>
-    <input type="text" name="nome" placeholder="Fulano..." alt="Digite o seu nome">
+    <input type="text" name="nome" placeholder="Fulano..." title="Digite o seu nome">
     <label for="sobrenome">Sobrenome: </label>
     <input type="text" name="sobrenome">
   </div>
