@@ -82,14 +82,14 @@
       <input type="checkbox" name="lindo"    value="linda"> Sou lindo(a)<br>
       <input type="checkbox" name="cheirosa" value="bemcuidado"> Sou bem cuidado(a)<br>
       <input type="checkbox" name="inteligente" value="Inteligente" >  Sou inteligente<br>
-      <input type="checkbox" name="esforcado" value="Esforcado">  Sou esforcado(a)<br>
+      <input type="checkbox" name="esforçado" value="Esforcado">  Sou esforcado(a)<br>
       <input type="checkbox" name="Integro" value="Integro">  Sou integro(a)<br>
       <input type="checkbox" name="Verdadeiro" value="Verdadeiro">  Sou verdadeiro(a)<br>
       <br>
     </div>
     <div>
       
-    <label for="interesse" >Interesse: (com multipla escolha</label>
+    <label for="interesse" >Interesse: (com multipla escolha)</label>
     <select name="interesse" multiple size="5"> 
         <option value="js" selected>JavaScript</option> 
         <option value="c">C</option> 
