@@ -31,7 +31,7 @@
   <h1> Formulário HTML js</h1> 
   <h2> Preencha o formulário abaixo</h2><br />
 
-<form oninput="x.value=parseInt(a.value)" action="Script_do_Formulario.php" method="post">
+<form oninput="x.value=parseInt(a.value)" action="/MeuPrimeiroServlet" method="post">
 
 <!-- DADOS PESSOAIS-->
 <fieldset>
@@ -219,7 +219,7 @@
  </table>
 </fieldset>
 <br />
-<input type="submit">
+<input type="submit" value="Enviar dados">
 <button formaction="http://localhost:3003/usuarios">Incluir</button>
 <button formaction="http://localhost:3003/usuarios2">Alterar</button>
 <input type="reset" value="Limpar">
