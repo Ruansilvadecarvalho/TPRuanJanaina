@@ -102,7 +102,7 @@
                     </select>
                 </div--%>
             </fieldset>
-            <%--fieldset>
+            <fieldset>
             
             </fieldset>
           
@@ -154,14 +154,14 @@
                     </select>
                 </div>
                 <div>
-                    <label for="cidade">Cidade: </label>
-                    <input type="text" name="cidade">
+                    <label for="endMunicipio">Municipio: </label>
+                    <input type="text" name="endMunicipio">
                 </div>
                 <div>
-                    <label for="cep">CEP: </label>
-                    <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+                    <label for="endCep">CEP: </label>
+                    <input type="text" name="endCep" size="5" maxlength="5"> - <input type="text" name="endCep2" size="3" maxlength="3">
                 </div>
-            </fieldset--%>
+            </fieldset>
             <br />
 
             <!-- DADOS DE LOGIN -->

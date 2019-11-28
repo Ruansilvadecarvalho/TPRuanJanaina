@@ -8,10 +8,10 @@ CREATE DATABASE crud
 	
 	CREATE TABLE public.usuario
 	(
-	  id numeric NOT NULL,
+	  id_usuario numeric NOT NULL,
 	  nome character varying,
 	  senha character varying,
-	  CONSTRAINT chave PRIMARY KEY (id)
+	  CONSTRAINT chave PRIMARY KEY (id_usuario)
 	)
 	WITH (
 	  OIDS=FALSE
@@ -25,6 +25,6 @@ CREATE DATABASE crud
 	  OWNER TO postgres;
 
 ALTER TABLE public.usuario
-    ADD COLUMN doc_rg caracter varying (20);
+    ADD COLUMN end_municipio character varying (50);
 ALTER TABLE public.usuario
-    ADD COLUMN doc_cpf numeric (11,0);
+    ADD COLUMN end_cep numeric (8,0);

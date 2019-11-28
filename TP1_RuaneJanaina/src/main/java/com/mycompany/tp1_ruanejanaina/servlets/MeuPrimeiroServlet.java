@@ -37,12 +37,24 @@ public class MeuPrimeiroServlet extends HttpServlet {
             throws ServletException, IOException {
         String nome = request.getParameter("nome");
         String sobrenome = request.getParameter("sobrenome");
-        String nomeCompleto = nome+" "+sobrenome;
+        String nomeCompleto = nome + " " + sobrenome;
         System.out.println("Nome completo: " + nomeCompleto);
         String senha = request.getParameter("senha");
+        String endMunicipio = request.getParameter("endMunicipio");
+        String endCep = request.getParameter("endCep");
+        String endCep2 = request.getParameter("endCep2");
+        String esseCep = endCep + endCep2;
+        int meuCep = Integer.parseInt(esseCep);
+        try {
+            meuCep = Integer.parseInt(esseCep);
+        } catch (NumberFormatException e) {
+            meuCep = 0;
+        }
         Usuario user = new Usuario();
         user.setNome(nomeCompleto);
         user.setSenha(senha);
+        user.setEndMunicipio(endMunicipio);
+        user.setEndCep(meuCep);
         Double aleatorio = Math.random();
         BigDecimal id = new BigDecimal(aleatorio);
         user.setIdUsuario(id);
@@ -52,7 +64,6 @@ public class MeuPrimeiroServlet extends HttpServlet {
         tr.commit();
         sessaoBD.close();
         response.sendRedirect("testezinho.jsp");
-        
 
     }
 

@@ -29,7 +29,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u")
     , @NamedQuery(name = "Usuario.findByIdUsuario", query = "SELECT u FROM Usuario u WHERE u.idUsuario = :idUsuario")
     , @NamedQuery(name = "Usuario.findByNome", query = "SELECT u FROM Usuario u WHERE u.nome = :nome")
-    , @NamedQuery(name = "Usuario.findBySenha", query = "SELECT u FROM Usuario u WHERE u.senha = :senha")})
+    , @NamedQuery(name = "Usuario.findBySenha", query = "SELECT u FROM Usuario u WHERE u.senha = :senha")
+    , @NamedQuery(name = "Usuario.findByEndMunicipio", query = "SELECT u FROM Usuario u WHERE u.endMunicipio = :endMunicipio")
+    , @NamedQuery(name = "Usuario.findByEndCep", query = "SELECT u FROM Usuario u WHERE u.endCep = :endCep")})
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -45,6 +47,11 @@ public class Usuario implements Serializable {
     @Size(max = 2147483647)
     @Column(name = "senha")
     private String senha;
+    @Size(max = 50)
+    @Column(name = "end_municipio")
+    private String endMunicipio;
+    @Column(name = "end_cep")
+    private Integer endCep;
 
     public Usuario() {
     }
@@ -77,6 +84,21 @@ public class Usuario implements Serializable {
         this.senha = senha;
     }
 
+    public String getEndMunicipio() {
+        return endMunicipio;
+    }
+
+    public void setEndMunicipio(String endMunicipio) {
+        this.endMunicipio = endMunicipio;
+    }
+
+    public Integer getEndCep() {
+        return endCep;
+    }
+    public void setEndCep(Integer endCep) {
+        this.endCep = endCep;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -99,7 +121,7 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.tp1_ruanejanaina.Usuario[ idUsuario=" + idUsuario + " ]";
+        return "com.mycompany.tp1_ruanejanaina.entidades.Usuario[ idUsuario=" + idUsuario + " ]";
     }
-    
+
 }
